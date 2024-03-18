@@ -147,7 +147,7 @@ impl<'a> Arg<'a> for String {
 }
 
 
-// String: a possibly-quoted segment
+// &str: a possibly-quoted segment
 impl<'a> Arg<'a> for &'a str {
     fn parse_from<'s: 'a>(input: &'s str) -> Result<(Self, Option<&'s str>)> {
         if input.is_empty() {
